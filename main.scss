@@ -1,0 +1,87 @@
+@import url('https://fonts.cdnfonts.com/css/cursed-timer-ulil');
+                
+$all-colors: (
+    "darkblue-color": #1B244A,
+    "white-color": #EEEEEE,
+    "red-color": #F94F6D,
+    "lightblue-color": #9AABD8,
+    "black-color": #080001
+);
+
+@function set-color($color) {
+    @return map-get($all-colors, $color)
+};
+
+#container {
+    background-color: set-color(darkblue-color);
+    width: 575px;
+    height: 385px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;  
+}
+
+#team {
+    display: flex;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 35.89px;
+    text-align: center;
+    color: set-color(white-color);
+    margin: 10px;
+
+    h2 {
+        padding: 0px 50px 0px 50px;
+        font-size: 40px;
+        font-weight: 700;
+    }
+}
+
+#score-monitor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.score-board {
+    width: 155px;
+    height: 120px;
+    top: 125px;
+    left: 82px;
+    border-radius: 5px 0px 0px 0px;
+    margin: 5px 50px;
+    background-color: set-color(black-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .score{
+        color: set-color(red-color);
+        font-size: 90px;
+        font-family: 'Cursed Timer ULiL', sans-serif;
+    };
+}
+
+#score-increment {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+
+    .increment {
+        margin: 20px 50px;
+        
+        .btn-add {
+            border: 2px solid set-color(lightblue-color);
+            width: 45px;
+            height: 45px;
+            border-radius: 5px;
+            margin: 2px;
+            color: set-color(lightblue-color);
+            background-color: transparent;
+            font-size: 16px;
+            font-weight: 400px;
+            font-family: "Cursed Timer ULiL", sans-serif;
+        }
+    }
+}
